@@ -1,0 +1,22 @@
+header{
+    background-color: #FFA07A;
+    font-size: x-large;
+    color:azure;
+} 
+ 
+.shape-center{
+  text-align: center;
+  background-color:rgba(93, 173, 226,0.8);
+}
+.shape-header{
+  margin-bottom: 0;
+}
+ .carousel-inner {
+        background-color: #5DADE2;
+        text-align: center;
+        line-height: 5;
+        font-size: 5rem;
+      }
+      .carousel-item {
+        height: 5em;
+      }
