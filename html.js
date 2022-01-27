@@ -56,7 +56,7 @@ const carouselPrevButton = document.querySelector(".carousel-control-prev");
 const carouselNextButton = document.querySelector(".carousel-control-next");
 const species = document.getElementById("species");
 const progress = document.querySelector(".progress-bar");
-var speciesHeight = species.offsetTop;
+
 
 
 
