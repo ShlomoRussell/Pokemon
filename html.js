@@ -1,6 +1,6 @@
 const shape = document.querySelectorAll(".shape");
 const carousel = document.querySelector(".carousel-inner");
-const header = document.querySelector(".fixed-top");
+const headers = document.querySelector(".header");
 var run;
 var fetchObject;
 
@@ -47,9 +47,7 @@ window.addEventListener("load", () => {
     ].classList.remove("active");
     currentCarousel[index].classList.add("active");
   });
-document.querySelector(".shape-header").style.marginTop = `${
-  header.getBoundingClientRect().height
-}px`;
+
 
 });
 
@@ -78,7 +76,7 @@ function Species(e) {
     fetchObject.pokemon_species.forEach(element => {
       arr.push(element.name)
     });
-    toHtml(arr);
+    toHtml(arr,undefined,'Choose a Species');
  
     document
         .querySelectorAll(".btn")
@@ -86,7 +84,7 @@ function Species(e) {
           element.addEventListener("click", varieties);
         });
    
-    scroll(speciesHeight);
+  
   });
   const breadcrumbs = document.querySelector("#shapes");
   breadcrumbs.classList.add("active");
@@ -95,17 +93,7 @@ function Species(e) {
   progress.innerHTML='33%'
 }
 
-const scroll = (height) => {
-  
-  const headerHeight = header.getBoundingClientRect().height;
-  console.log(headerHeight)
-  const position = height - headerHeight;
-  console.log(height);
-  window.scrollTo({
-    left: 0,
-    top: position,
-  });
-};
+
 
 const img = document.getElementById("img");
 function varieties(e) {
@@ -127,7 +115,7 @@ function varieties(e) {
       }
        
     }
-    toHtml(arr,data)
+    toHtml(arr,data,'Click on a Pokemon')
   });
   const breadcrumbs = document.querySelector("#Species");
   breadcrumbs.classList.add("active");
@@ -138,7 +126,7 @@ function varieties(e) {
 
 
 
-function toHtml(arr,data) {
+function toHtml(arr,data,header) {
    const html = arr.reduce((array, element,index) => {
      array.push(`<div class="col-sm-2 mb-2">
     <div class="card">
@@ -151,4 +139,5 @@ function toHtml(arr,data) {
      return array;
    }, []);
   species.innerHTML = html.join("");
+  headers.innerHTML = header;
 }

@@ -4,12 +4,18 @@ header{
     color:azure;
 } 
  
-.shape-center{
+.center{
   text-align: center;
   background-color:rgba(93, 173, 226,0.8);
 }
-.shape-header{
+.header{
   margin-bottom: 0;
+}
+.row{
+  background-color: #5DADE2;
+}
+.card{
+  background-color: lightblue
 }
  .carousel-inner {
         background-color: #5DADE2;
